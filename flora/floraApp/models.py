@@ -6,9 +6,9 @@ class Plant(models.Model):
     description = models.TextField()
 
 class Language(models.Model):
-    name = model.CharField(max_length=30)
+    name = models.CharField(max_length=30)
 
 class PlantName(models.Model):
     name = models.CharField(max_length=30)
-    Plant = models.ForeignKey()
-    Language = models.ForeignKey()
+    Plant = models.ForeignKey(Plant)
+    Language = models.ForeignKey(Language)
